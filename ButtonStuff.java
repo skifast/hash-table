@@ -120,7 +120,7 @@ public class ButtonStuff implements ActionListener{
 			/*Therefore the minimum length of any file name is 4 characters*/
 			if(lengthOfText > 3){
 				/*If the name of the file ends in .txt*/
-				if(lookThroughThis.substring(lengthOfText - 4, lengthOfText).equals(".txt")){
+				if(".txt".equals(lookThroughThis.substring(lengthOfText - 4, lengthOfText))){
 					/*Set the file to the provided file name*/
 					changeFile(file);
 					tf3.setText("The file has been changed to " + lookThroughThis);
