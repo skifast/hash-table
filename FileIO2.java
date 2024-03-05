@@ -124,15 +124,15 @@ public class FileIO2 {
 				String[] currentLine = line.split(" ");
 				name = currentLine[0];
 				if(word.equals(name)){
-					if(function.equals("frequency")){
+					if("frequency".equals(function)){
 						int count = Integer.parseInt(currentLine[1]);
 						return count;
 					}
-					else if(function.equals("firstLine")){
+					else if("firstLine".equals(function)){
 						int firstLine = Integer.parseInt(currentLine[2]);
 						return firstLine;
 					}
-					else if(function.equals("lastLine")){
+					else if("lastLine".equals(function)){
 						int lastLine = Integer.parseInt(currentLine[3]);
 						
 						/*This happens when the word appears only once*/
