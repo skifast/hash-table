@@ -1,4 +1,5 @@
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.*;
 
 
@@ -74,7 +75,7 @@ public class FileIO2 {
 			String line;
 			
 			int currentLineCount = 0;
-			while((line= br.readLine()) != null){
+			while((line= BoundedLineReader.readLine(br, 5_000_000)) != null){
 				currentLineCount += 1;
 				//divides the line by spaces and puts it into a list
 				String[] currentLine = line.split(" ");
@@ -119,7 +120,7 @@ public class FileIO2 {
 			br = new BufferedReader(fr);
 			String line;
 			
-			while((line = br.readLine()) != null){
+			while((line = BoundedLineReader.readLine(br, 5_000_000)) != null){
 				/*The line is split into the name and frequency*/
 				String[] currentLine = line.split(" ");
 				name = currentLine[0];
